@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnimeRouteImport } from './routes/anime'
+import { Route as CdramaRouteImport } from './routes/cdrama'
+import { Route as GenresRouteImport } from './routes/genres'
+import { Route as KdramaRouteImport } from './routes/kdrama'
+import { Route as MoviesRouteImport } from './routes/movies'
+import { Route as MyListRouteImport } from './routes/my-list'
+import { Route as OriginalsRouteImport } from './routes/originals'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as SeriesRouteImport } from './routes/series'
+import { Route as TitleIdRouteImport } from './routes/title.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnimeRoute = AnimeRouteImport.update({
+  id: '/anime',
+  path: '/anime',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CdramaRoute = CdramaRouteImport.update({
+  id: '/cdrama',
+  path: '/cdrama',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GenresRoute = GenresRouteImport.update({
+  id: '/genres',
+  path: '/genres',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KdramaRoute = KdramaRouteImport.update({
+  id: '/kdrama',
+  path: '/kdrama',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MoviesRoute = MoviesRouteImport.update({
+  id: '/movies',
+  path: '/movies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyListRoute = MyListRouteImport.update({
+  id: '/my-list',
+  path: '/my-list',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OriginalsRoute = OriginalsRouteImport.update({
+  id: '/originals',
+  path: '/originals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeriesRoute = SeriesRouteImport.update({
+  id: '/series',
+  path: '/series',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TitleIdRoute = TitleIdRouteImport.update({
+  id: '/title/$id',
+  path: '/title/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/anime': typeof AnimeRoute
+  '/cdrama': typeof CdramaRoute
+  '/genres': typeof GenresRoute
+  '/kdrama': typeof KdramaRoute
+  '/movies': typeof MoviesRoute
+  '/my-list': typeof MyListRoute
+  '/originals': typeof OriginalsRoute
+  '/search': typeof SearchRoute
+  '/series': typeof SeriesRoute
+  '/title/$id': typeof TitleIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/anime': typeof AnimeRoute
+  '/cdrama': typeof CdramaRoute
+  '/genres': typeof GenresRoute
+  '/kdrama': typeof KdramaRoute
+  '/movies': typeof MoviesRoute
+  '/my-list': typeof MyListRoute
+  '/originals': typeof OriginalsRoute
+  '/search': typeof SearchRoute
+  '/series': typeof SeriesRoute
+  '/title/$id': typeof TitleIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/anime': typeof AnimeRoute
+  '/cdrama': typeof CdramaRoute
+  '/genres': typeof GenresRoute
+  '/kdrama': typeof KdramaRoute
+  '/movies': typeof MoviesRoute
+  '/my-list': typeof MyListRoute
+  '/originals': typeof OriginalsRoute
+  '/search': typeof SearchRoute
+  '/series': typeof SeriesRoute
+  '/title/$id': typeof TitleIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/anime'
+    | '/cdrama'
+    | '/genres'
+    | '/kdrama'
+    | '/movies'
+    | '/my-list'
+    | '/originals'
+    | '/search'
+    | '/series'
+    | '/title/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/anime'
+    | '/cdrama'
+    | '/genres'
+    | '/kdrama'
+    | '/movies'
+    | '/my-list'
+    | '/originals'
+    | '/search'
+    | '/series'
+    | '/title/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/anime'
+    | '/cdrama'
+    | '/genres'
+    | '/kdrama'
+    | '/movies'
+    | '/my-list'
+    | '/originals'
+    | '/search'
+    | '/series'
+    | '/title/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnimeRoute: typeof AnimeRoute
+  CdramaRoute: typeof CdramaRoute
+  GenresRoute: typeof GenresRoute
+  KdramaRoute: typeof KdramaRoute
+  MoviesRoute: typeof MoviesRoute
+  MyListRoute: typeof MyListRoute
+  OriginalsRoute: typeof OriginalsRoute
+  SearchRoute: typeof SearchRoute
+  SeriesRoute: typeof SeriesRoute
+  TitleIdRoute: typeof TitleIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/anime': {
+      id: '/anime'
+      path: '/anime'
+      fullPath: '/anime'
+      preLoaderRoute: typeof AnimeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cdrama': {
+      id: '/cdrama'
+      path: '/cdrama'
+      fullPath: '/cdrama'
+      preLoaderRoute: typeof CdramaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/genres': {
+      id: '/genres'
+      path: '/genres'
+      fullPath: '/genres'
+      preLoaderRoute: typeof GenresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kdrama': {
+      id: '/kdrama'
+      path: '/kdrama'
+      fullPath: '/kdrama'
+      preLoaderRoute: typeof KdramaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/movies': {
+      id: '/movies'
+      path: '/movies'
+      fullPath: '/movies'
+      preLoaderRoute: typeof MoviesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-list': {
+      id: '/my-list'
+      path: '/my-list'
+      fullPath: '/my-list'
+      preLoaderRoute: typeof MyListRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/originals': {
+      id: '/originals'
+      path: '/originals'
+      fullPath: '/originals'
+      preLoaderRoute: typeof OriginalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/series': {
+      id: '/series'
+      path: '/series'
+      fullPath: '/series'
+      preLoaderRoute: typeof SeriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/title/$id': {
+      id: '/title/$id'
+      path: '/title/$id'
+      fullPath: '/title/$id'
+      preLoaderRoute: typeof TitleIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnimeRoute: AnimeRoute,
+  CdramaRoute: CdramaRoute,
+  GenresRoute: GenresRoute,
+  KdramaRoute: KdramaRoute,
+  MoviesRoute: MoviesRoute,
+  MyListRoute: MyListRoute,
+  OriginalsRoute: OriginalsRoute,
+  SearchRoute: SearchRoute,
+  SeriesRoute: SeriesRoute,
+  TitleIdRoute: TitleIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
