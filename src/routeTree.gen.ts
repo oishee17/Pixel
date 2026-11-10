@@ -15,8 +15,11 @@ import { Route as CdramaRouteImport } from './routes/cdrama'
 import { Route as GenresRouteImport } from './routes/genres'
 import { Route as KdramaRouteImport } from './routes/kdrama'
 import { Route as MoviesRouteImport } from './routes/movies'
+import { Route as MyListRouteImport } from './routes/my-list'
 import { Route as OriginalsRouteImport } from './routes/originals'
+import { Route as SearchRouteImport } from './routes/search'
 import { Route as SeriesRouteImport } from './routes/series'
+import { Route as TitleIdRouteImport } from './routes/title.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -48,14 +51,29 @@ const MoviesRoute = MoviesRouteImport.update({
   path: '/movies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MyListRoute = MyListRouteImport.update({
+  id: '/my-list',
+  path: '/my-list',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OriginalsRoute = OriginalsRouteImport.update({
   id: '/originals',
   path: '/originals',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SeriesRoute = SeriesRouteImport.update({
   id: '/series',
   path: '/series',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TitleIdRoute = TitleIdRouteImport.update({
+  id: '/title/$id',
+  path: '/title/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -66,8 +84,11 @@ export interface FileRoutesByFullPath {
   '/genres': typeof GenresRoute
   '/kdrama': typeof KdramaRoute
   '/movies': typeof MoviesRoute
+  '/my-list': typeof MyListRoute
   '/originals': typeof OriginalsRoute
+  '/search': typeof SearchRoute
   '/series': typeof SeriesRoute
+  '/title/$id': typeof TitleIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -76,8 +97,11 @@ export interface FileRoutesByTo {
   '/genres': typeof GenresRoute
   '/kdrama': typeof KdramaRoute
   '/movies': typeof MoviesRoute
+  '/my-list': typeof MyListRoute
   '/originals': typeof OriginalsRoute
+  '/search': typeof SearchRoute
   '/series': typeof SeriesRoute
+  '/title/$id': typeof TitleIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -87,8 +111,11 @@ export interface FileRoutesById {
   '/genres': typeof GenresRoute
   '/kdrama': typeof KdramaRoute
   '/movies': typeof MoviesRoute
+  '/my-list': typeof MyListRoute
   '/originals': typeof OriginalsRoute
+  '/search': typeof SearchRoute
   '/series': typeof SeriesRoute
+  '/title/$id': typeof TitleIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -99,8 +126,11 @@ export interface FileRouteTypes {
     | '/genres'
     | '/kdrama'
     | '/movies'
+    | '/my-list'
     | '/originals'
+    | '/search'
     | '/series'
+    | '/title/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -109,8 +139,11 @@ export interface FileRouteTypes {
     | '/genres'
     | '/kdrama'
     | '/movies'
+    | '/my-list'
     | '/originals'
+    | '/search'
     | '/series'
+    | '/title/$id'
   id:
     | '__root__'
     | '/'
@@ -119,8 +152,11 @@ export interface FileRouteTypes {
     | '/genres'
     | '/kdrama'
     | '/movies'
+    | '/my-list'
     | '/originals'
+    | '/search'
     | '/series'
+    | '/title/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -130,8 +166,11 @@ export interface RootRouteChildren {
   GenresRoute: typeof GenresRoute
   KdramaRoute: typeof KdramaRoute
   MoviesRoute: typeof MoviesRoute
+  MyListRoute: typeof MyListRoute
   OriginalsRoute: typeof OriginalsRoute
+  SearchRoute: typeof SearchRoute
   SeriesRoute: typeof SeriesRoute
+  TitleIdRoute: typeof TitleIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -178,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MoviesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/my-list': {
+      id: '/my-list'
+      path: '/my-list'
+      fullPath: '/my-list'
+      preLoaderRoute: typeof MyListRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/originals': {
       id: '/originals'
       path: '/originals'
@@ -185,11 +231,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OriginalsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/series': {
       id: '/series'
       path: '/series'
       fullPath: '/series'
       preLoaderRoute: typeof SeriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/title/$id': {
+      id: '/title/$id'
+      path: '/title/$id'
+      fullPath: '/title/$id'
+      preLoaderRoute: typeof TitleIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -202,8 +262,11 @@ const rootRouteChildren: RootRouteChildren = {
   GenresRoute: GenresRoute,
   KdramaRoute: KdramaRoute,
   MoviesRoute: MoviesRoute,
+  MyListRoute: MyListRoute,
   OriginalsRoute: OriginalsRoute,
+  SearchRoute: SearchRoute,
   SeriesRoute: SeriesRoute,
+  TitleIdRoute: TitleIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
