@@ -2,9 +2,9 @@
 
 **Your world of stories, all in one place.**
 
-Pixel is a modern, Netflix-inspired OTT streaming platform designed to bring movies, television series, anime, K-Dramas, and C-Dramas together in one cinematic entertainment experience.
+Pixel is a modern, Netflix-inspired OTT streaming platform designed to bring movies, television series, anime, K-Dramas and C-Dramas together in one cinematic entertainment experience.
 
-Featuring a sleek dark interface, personalized viewer profiles, content discovery, genre-based browsing, and interactive watchlist functionality, Pixel aims to recreate the experience of exploring a premium streaming service.
+Featuring a sleek dark interface, personalized viewer profiles, content discovery, genre-based browsing and interactive watchlist functionality, Pixel aims to recreate the experience of exploring a premium streaming service.
 
 ---
 
@@ -12,9 +12,9 @@ Featuring a sleek dark interface, personalized viewer profiles, content discover
 
 Pixel is a frontend-focused streaming platform built to demonstrate modern web development concepts through an interactive and visually immersive application.
 
-The platform features a collection of fictional movies and shows, original Pixel productions, and dedicated browsing experiences for different entertainment categories.
+The platform features a collection of fictional movies and shows, original Pixel productions and dedicated browsing experiences for different entertainment categories.
 
-Its interface is designed around a cinematic dark theme, with large featured banners, attractive title cards, smooth transitions, and intuitive navigation.
+Its interface is designed around a cinematic dark theme, with large featured banners, attractive title cards, smooth transitions and intuitive navigation.
 
 **Project Name:** Pixel  
 **Project Type:** Netflix-Inspired OTT Streaming Platform  
@@ -38,16 +38,16 @@ Explore different types of entertainment through dedicated browsing pages.
 - **Pixel Originals:** Fictional exclusive movies and series created for the platform.
 - **Movies:** Browse feature films across different genres.
 - **Series:** Discover binge-worthy television shows.
-- **Anime:** Explore fantasy, action, adventure, and slice-of-life anime.
-- **K-Drama:** Discover Korean romance, thriller, and drama series.
-- **C-Drama:** Explore Chinese fantasy, historical, romance, and drama series.
+- **Anime:** Explore fantasy, action, adventure and slice-of-life anime.
+- **K-Drama:** Discover Korean romance, thriller and drama series.
+- **C-Drama:** Explore Chinese fantasy, historical, romance and drama series.
 
 ### 🔍 3. Search and Content Discovery
 - Search for titles by movie or series name.
-- Search using actors, directors, genres, and keywords.
+- Search using actors, directors, genres and keywords.
 - Browse titles by genre.
 - Explore content through dedicated category pages.
-- Filter titles by year, language, and rating.
+- Filter titles by year, language and rating.
 - Sort results by different criteria.
 - Reset filters to return to the complete catalogue.
 
@@ -155,7 +155,7 @@ Pixel follows a premium OTT-inspired visual identity.
 - Poppins
 - JetBrains Mono
 
-The interface is designed to provide an immersive entertainment experience across desktop, tablet, and mobile devices.
+The interface is designed to provide an immersive entertainment experience across desktop, tablet and mobile devices.
 
 ---
 
@@ -317,10 +317,10 @@ Pixel currently uses a locally defined content catalogue and browser-based stora
 
 - Movie and series information is maintained in `src/data/catalog.ts`.
 - Viewer profiles and preferences are managed through `src/lib/viewer-store.tsx`.
-- My List, likes/dislikes, notifications, and viewing progress are stored using browser `localStorage`.
+- My List, likes/dislikes, notifications and viewing progress are stored using browser `localStorage`.
 - Each browser maintains its own saved viewer data.
 
-**Note:** The current implementation does not include a production backend, cloud database, or server-based user authentication. Viewer information is stored locally in the browser.
+**Note:** The current implementation does not include a production backend, cloud database or server-based user authentication. Viewer information is stored locally in the browser.
 
 ---
 
@@ -366,7 +366,7 @@ Potential improvements for future versions include:
 Pixel is an independent educational and development project inspired by popular OTT streaming platforms.
 
 - Pixel is not affiliated with, sponsored by, or associated with Netflix.
-- Netflix branding, logos, and proprietary assets are not used as the application's identity.
+- Netflix branding, logos and proprietary assets are not used as the application's identity.
 - All movie and series titles and their associated fictional information are created for demonstration purposes.
 - Sample video content is sourced from openly licensed Blender Foundation films.
 - No copyrighted commercial movies are hosted or distributed by this project.
