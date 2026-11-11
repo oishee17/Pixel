@@ -390,6 +390,14 @@ This project demonstrates practical experience with:
 
 ---
 
+## 🙌 Acknowledgements
+
+- [Netflix](https://www.netflix.com/) – Inspiration from Netflix - the OTT Streaming Platform.
+- [Lovable](https://lovable.dev/) – AI-powered development platform used during project development.
+- The open-source developer community for the tools and libraries used in this project.
+
+---
+
 ## 👩‍💻 Author
 
 **Oishee Biswas**
